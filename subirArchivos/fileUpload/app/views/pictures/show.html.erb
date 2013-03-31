@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @picture.name %><br />
+  <div class="imagen img">
+  <%= image_tag @picture.image_url.to_s %>
+  </div>
+</p>
+
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>
+<!--
+	!!!
+-si bien es cierto las gemas 'carrierwave', 'rmagick'
+tienes sus propios metodos para redimensionar, pero 
+para mi la forma mas facil de redimensionar imagenes
+es con solo CSS (mirar pictures.css.scss)
+
+-para poder usar la gema rmagick, se tiene que instalar 
+imagemagick, rmagick y sus dependencias como libmagick
+y otras para que funcione con ruby, hacerlo desde synaptic
+-->
